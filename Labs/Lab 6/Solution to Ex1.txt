@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*; //contains Scanner class
+
+public class Ex2{
+
+	public static void main(String [] args) throws FileNotFoundException{
+		System.out.println("Program begins");
+		File filein = new File("data.txt");
+		Scanner input = new Scanner(filein);
+
+		while( input.hasNext() ){ //keeps reading while there's more in the file
+			getName(input);
+		}
+	}
+	public static void getName(Scanner in){
+			String name = "blank";
+			name =in.next();
+			getScores(in, name);
+	}
+	public static void getScores(Scanner in, String name){
+		double totalScore = 0.0;
+		totalScore += in.nextDouble();
+		totalScore += in.nextDouble();
+		totalScore += in.nextDouble();
+		double avgScore = getAvg(totalScore);
+		System.out.println(name + " " + avgScore);
+	}
+	public static double getAvg(double totalScore){
+			return totalScore/3;
+	}
+
+
+}
+/*
+Input:
+toad
+10.1
+20.2
+30.3
+
+Output:
+toad 20.2
+*/

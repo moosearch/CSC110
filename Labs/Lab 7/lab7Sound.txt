@@ -1,0 +1,41 @@
+	
+	// Name: getSampleValues
+	// Purpose: Converts a sound to an array of double values
+	// Input: A Sound object
+	// Output: returns the samples in an array of doubles
+	public static double [] getSampleValues(Sound s)
+	{
+		int nSamples = s.getNumSamples();
+		double [] samples = new double [nSamples];
+		double nextSample;
+		for( int i=0 ; i<nSamples ; i++ )
+		{
+			nextSample = s.getSampleValueAt(i);
+			if( nextSample < 0 )
+				samples[i] = nextSample / 32768;
+			else
+			samples[i] = nextSample / 32767;
+		}
+		return samples;
+	}
+	
+	// Name: setSampleValues
+	// Purpose: Creates a Sound object from an array of doubles.
+	// Input: any Sound object (will be manipulated)
+	// an array of double [] values
+	// Output: The Sound object is returned once manipulated to
+	// contain the values of the array.
+	public static Sound setSampleValues(Sound sound, double[] samples)
+	{
+		if( sound.getNumSamples() != samples.length )
+			sound = new Sound( samples.length );
+		double temp;
+		for( int i=0 ; i<samples.length ; i++ ){
+			if( samples[i] > 0 )
+				temp = samples[i] * 32767;
+			else
+				temp = samples[i] * 32768;
+			sound.setSampleValueAt( i , (int)temp );
+		}
+		return sound;
+	}

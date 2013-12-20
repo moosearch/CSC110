@@ -1,0 +1,186 @@
+<!-- saved from url=(0058)http://www.csc.uvic.ca/~csc110l/lab1_intro/lab3_notes.html -->
+<html><head><title></title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<style type="text/css" id="wrc-middle-css">.wrc_whole_window{	display: none; 	position: fixed; 	z-index: 2147483647;	background-color: rgba(40, 40, 40, 0.9);	word-spacing: normal;	margin: 0px;	padding: 0px;	border: 0px;	line-height: normal;	letter-spacing: normal;}.wrc_middle_main {	font-family: Segoe UI, Arial Unicode MS, Arial, Sans-Serif;	font-size: 14px;	width: 600px;	height: auto;	margin: 0px auto;	margin-top: 15%;    background: url("chrome://wrc/skin/png/background-body.png");	background-color: rgb(39, 53, 62);}.wrc_middle_logo {    background: url("chrome://wrc/skin/logo.jpg") no-repeat left bottom;    width: 140px;    height: 42px;    color: orange;    display: table-cell;    text-align: right;    vertical-align: middle;}.wrc_icon_warning {	margin: 20px 10px 20px 15px;	float: left;	background-color: transparent;}.wrc_middle_title {    color: #b6bec7;	height: auto;    margin: 0px auto;	font-size: 2.2em;	white-space: nowrap;	text-align: center;}.wrc_middle_hline {    height: 2px;	width: 100%;    display: block;}.wrc_middle_description {	text-align: center;	margin: 15px;	font-size: 1.4em;	padding: 20px;	height: auto;	color: white;	min-height: 3.5em;}.wrc_middle_actions_main_div {	text-align: center;	margin-bottom: 15px;}.wrc_middle_actions_blue_button {	-moz-appearance: none;	border-radius: 7px;	-moz-border-radius: 7px/7px;	border-radius: 7px/7px;	background-color: rgb(0, 173, 223) !important;	display: inline-block;	width: auto;	cursor: Pointer;	border: 2px solid #00dddd;	text-decoration: none;}.wrc_middle_actions_blue_button:hover {	background-color: rgb(0, 159, 212) !important;}.wrc_middle_actions_blue_button:active {	background-color: rgb(0, 146, 200) !important;	border: 2px solid #00aaaa;}.wrc_middle_actions_blue_button div {	display: inline-block;	width: auto;	cursor: Pointer;	margin: 3px 10px 3px 10px;	color: white !important;	font-size: 1.2em;	font-weight: bold;}.wrc_middle_action_low {	font-size: 0.9em;	white-space: nowrap;	cursor: Pointer;	color: grey !important;	margin: 10px 10px 0px 10px;	text-decoration: none;}.wrc_middle_action_low:hover {	color: #aa4400 !important;}.wrc_middle_actions_rest_div {	padding-top: 5px;	white-space: nowrap;	text-align: center;}.wrc_middle_action {	white-space: nowrap;	cursor: Pointer;	color: red !important;	font-size: 1.2em;	margin: 10px 10px 0px 10px;	text-decoration: none;}.wrc_middle_action:hover {	color: #aa4400 !important;}</style><script language="JavaScript" type="text/javascript" id="wrc-script-middle_window">var g_inputsCnt = 0;var g_InputThis = new Array(null, null, null, null);var g_alerted = false;/* we test the input if it includes 4 digits   (input is a part of 4 inputs for filling the credit-card number)*/function is4DigitsCardNumber(val){	var regExp = new RegExp('[0-9]{4}');	return (val.length == 4 && val.search(regExp) == 0);}/* testing the whole credit-card number 19 digits devided by three '-' symbols or   exactly 16 digits without any dividers*/function isCreditCardNumber(val){	if(val.length == 19)	{		var regExp = new RegExp('[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}');		return (val.search(regExp) == 0);	}	else if(val.length == 16)	{		var regExp = new RegExp('[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}');		return (val.search(regExp) == 0);	}	return false;}function CheckInputOnCreditNumber(self){	if(g_alerted)		return false;	var value = self.value;	if(self.type == 'text')	{		if(is4DigitsCardNumber(value))		{			var cont = true;			for(i = 0; i < g_inputsCnt; i++)				if(g_InputThis[i] == self)					cont = false;			if(cont && g_inputsCnt < 4)			{				g_InputThis[g_inputsCnt] = self;				g_inputsCnt++;			}		}		g_alerted = (g_inputsCnt == 4);		if(g_alerted)			g_inputsCnt = 0;		else			g_alerted = isCreditCardNumber(value);	}	return g_alerted;}function CheckInputOnPassword(self){	if(g_alerted)		return false;	var value = self.value;	if(self.type == 'password')	{		g_alerted = (value.length > 0);	}	return g_alerted;}function onInputBlur(self, bRatingOk, bFishingSite){	var bCreditNumber = CheckInputOnCreditNumber(self);	var bPassword = CheckInputOnPassword(self);	if((!bRatingOk || bFishingSite == 1) && (bCreditNumber || bPassword) )	{		var warnDiv = document.getElementById("wrcinputdiv");		if(warnDiv)		{			/* show the warning div in the middle of the screen */			warnDiv.style.left = "0px";			warnDiv.style.top = "0px";			warnDiv.style.width = "100%";			warnDiv.style.height = "100%";			document.getElementById("wrc_warn_fs").style.display = 'none';			document.getElementById("wrc_warn_cn").style.display = 'none';			if(bFishingSite)				document.getElementById("wrc_warn_fs").style.display = 'block';			else				document.getElementById("wrc_warn_cn").style.display = 'block';			warnDiv.style.display = 'block';		}	}}</script></head><body><p>
+	<style type="text/css">
+.style2 {
+	COLOR: #ff0505
+}	</style>
+</p>
+<meta content="Microsoft FrontPage 4.0" name="GENERATOR">
+<h2 align="center">
+	<font size="6">CSc 110 Lab 3</font></h2>
+<blockquote>
+	<p>
+		<em><strong>First, a review of the last exercise from lab 2 and For-Loops</strong></em></p>
+	<p>
+		See <a href="http://webhome.csc.uvic.ca/%7Ecsc110l/2012_5/Lab3/printingReview.html">this page</a> for the program and answers to the questions from last lab.</p>
+	<p>
+		And For-Loops, what's going on:<br>
+		<img src="Lab3_files/for.jpg"></p>
+	<hr>
+	<p>
+		In these 2 hours of lab you will be practicing with <b>methods</b> and <b>loops</b>.</p>
+	<p>
+		Methods:</p>
+	<ol>
+		<li>
+			They are sub programs that separate some of the actions that a 
+program performs.&nbsp; You can recognize the call by the presence of 
+brackets.&nbsp;<br>
+			<br>
+			System.out.println() is a call to a method.<br>
+			&nbsp;</li>
+		<li>
+			Much of the time a method is given one or more values from the 
+program that calls it.&nbsp; These are called paramenters.&nbsp; 
+Parameters are copied and the copies are employed in some way by the 
+subprogram.&nbsp;<br>
+			<br>
+			printTransaction(amount, kind, date, balance);<br>
+			&nbsp;</li>
+		<li>
+			Often we want a method to return some value.&nbsp; In its simplest 
+form the value is the result of some calculation that we may make many 
+times in the calling program and don't wish to repeat the code over and 
+over.&nbsp; The returned value is usually captured as part of a larger 
+expression or as part of a simple assignment.&nbsp;<br>
+			<br>
+			double area = computeArea(dim1, dim2)<br>
+			double volume = compVol(dim3, area);</li>
+	</ol>
+	New programmers must learn to imagine that a method exists before they 
+code it and to see it's place in a larger program.&nbsp; This ability 
+comes with practice.&nbsp; Most of you would already know what the 
+methods referred to in 2 and 3 above must do.<br>
+	<br>
+	<b>Learn to quickly write a correct method header (first line). </b><br>
+	<br>
+	A correct header for the method referenced by <i>2</i> above is given.&nbsp; Look at it then do the same for the methods referenced in <i>3</i> above:<br>
+	<p>
+		public static void printTransaction(double amount, String transaction, String dateStr, double bal)<br>
+		<br>
+		To be correct printTransaction must be called with 4 parameters&nbsp; a
+ double, a String, a String, and a double, no different order or 
+different number parameters will match this signature.&nbsp;<br>
+		<br>
+		Note: Since the parameters are copied for use in the method the names 
+can be the same or they can be different.&nbsp; When a new programmer 
+learns to recognize the need for a sub program,&nbsp; 'a cog' in a 
+solution and writes the sub program first, the names are likely to be 
+different.&nbsp; When the subprogram is written just as it is needed the
+ parameter names are likely to be the same.&nbsp; In this example the 
+mapping of the parameters from the caller to the method is:</p>
+	<ul>
+		<li>
+			amount -&gt; amount</li>
+		<li>
+			kind -&gt; transaction</li>
+		<li>
+			date -&gt; dateStr</li>
+		<li>
+			balance -&gt; bal<br>
+			&nbsp;</li>
+	</ul>
+	<p>
+		&nbsp;</p>
+</blockquote>
+<h3>
+	<b><font size="5">Exercises</font></b></h3>
+<blockquote>
+	<h4>
+		Practice, practice, practice.</h4>
+	<p>
+		Your TA may ask you to just share the experience with someone beside 
+you if we can't quickly fix the errors that result. You can always come 
+back and do the demo and more experiments on your own.</p>
+</blockquote>
+<p>
+	<em><strong>Example 1:</strong></em></p>
+<blockquote>
+	<p>
+		Type in:</p>
+	<p>
+		<img src="Lab3_files/Name.jpg" height="202" width="665"></p>
+	<p>
+		Compile and run the program.</p>
+</blockquote>
+<p>
+	<em><strong>Example 2:</strong></em></p>
+<blockquote>
+	<p>
+		Add a simple method to print the name: See what happens when the 
+String name is defined in the main instead of the method. Note the 
+error. Is the error a compile time or run time error? Are there 
+work-arounds? What is the best solution?</p>
+	<p>
+		<img alt="method" src="Lab3_files/Name2.jpg" height="278" width="709"></p>
+	<p>
+		Compile and run the program</p>
+</blockquote>
+<p>
+	<em><strong>Example 3:</strong></em></p>
+<blockquote>
+	<p>
+		Add a parameter to your simple method. What is the benefit of doing this. Generate a <i>compile-time error</i> by moving the declaration of name from the main to the method.</p>
+	<p>
+		<img alt="method2" src="Lab3_files/Name3.jpg" height="273" width="633"></p>
+	<p>
+		Compile and run the program</p>
+</blockquote>
+<p>
+	<em><strong>Example 4:</strong></em></p>
+<blockquote>
+	<p>
+		Add a second method with two parameters.</p>
+	<p>
+		<img alt="methods" src="Lab3_files/Name4.jpg" height="487" width="602"></p>
+	<p>
+		Compile and run the program</p>
+</blockquote>
+<h3>
+	<b><font size="5">Continue with the following exercises:</font></b></h3>
+<p>
+	<em><strong>Exercise 1</strong></em></p>
+<blockquote>
+	<p>
+		Download this <a href="http://webhome.csc.uvic.ca/%7Ecsc110l/2012_5/Lab3/code/Song.java">program</a> and fill in the main method.</p>
+</blockquote>
+<p>
+	<em><strong>Exercise 2</strong></em></p>
+<blockquote>
+	<p>
+		Type in the following program and fill in the main method.</p>
+	<p>
+		<img alt="redbull" src="Lab3_files/Redbull.jpg" height="266" width="664"></p>
+</blockquote>
+<blockquote>
+	<p>
+		Continuing with this exercise...</p>
+	<ol>
+		<li>
+			Fix the grammar errors that occur in the output of the song.<br>
+			HINT: what is output when one bottle or no bottles are left?</li>
+		<li>
+			Add a parameter to vary the number of bottles that start on the wall.</li>
+	</ol>
+</blockquote>
+<p>
+	<em><strong>Exercise 3 </strong></em></p>
+<blockquote>
+	<p>
+		Download this <a href="http://webhome.csc.uvic.ca/%7Ecsc110l/2012_5/Lab3/code/Time.java">program</a> and compile and run it.</p>
+	<p>
+		Try adding a <b>return value</b> to the <i>calcDuration</i> method and move the print statement into to the main method.</p>
+</blockquote>
+<p>
+	<em><strong>Exercise 4: Review </strong></em></p>
+<blockquote>
+	<p>
+		Download this <a href="http://webhome.csc.uvic.ca/%7Ecsc110l/2012_5/Lab3/code/Loop.java">program</a> and compile and run it.</p>
+	<p>
+		Answer the questions in the comment after the program.</p>
+</blockquote>
+<p>
+	The End</p>
+</body></html>

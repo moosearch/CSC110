@@ -1,0 +1,83 @@
+public class Ages{
+
+	public static void main(String [] args){
+
+		//testing the methods
+		oldInCanada(90);
+	}
+
+	public static void hockeyCanada(int age){
+		if(age > 20){
+			System.out.println("No junior teams for you.");
+		}else{
+			System.out.println("You may join...");
+		}
+		if(age <= 12){
+			System.out.println("PeeWee");
+		}
+		if(age >= 13 && age <= 14){
+			System.out.println("Bantam");
+		}
+		if(age >= 15 && age <=17){
+			System.out.println("Midget");
+		}
+		if(age >= 18 && age <= 20){
+			System.out.println("Juvenile");
+		}
+	}
+
+	public static void hockeySwitzerland(int age){
+		if(age > 20){
+			System.out.println("No junior teams for you.");
+		}else{
+			System.out.println("You may join...");
+		}
+		if(age <= 20){
+			System.out.println("Junioren");
+		}
+		if(age <= 18){
+			System.out.println("Novizen");
+		}
+		if(age <= 15){
+			System.out.println("Mini");
+		}
+		if(age <= 13){
+			System.out.println("Moskito");
+		}
+		if(age <= 11){
+			System.out.println("Piccolo");
+		}
+	}
+
+	public static void oldInCanada(int age){
+		int pm = 0;
+		int govGen = 0;
+		int queen = 0;
+
+		if(age >= 100){
+			queen = (age - 100) / 5 + 1;
+		}
+		if(age >= 90){
+			govGen = (age - 90) / 5 + 1;
+		}
+		if(age >= 65){
+			pm = (age - 65) / 5 + 1;
+		}
+
+		System.out.println("You could have...");
+		if(pm < 0){
+			System.out.println("No official letters about your age.");
+		}else{
+			System.out.println(pm + " letters from the Prime Minister");
+		}
+
+		if(govGen > 0){
+			System.out.println("and " + govGen + " letters from the Governor General");
+		}
+
+		if(queen > 0){
+			System.out.println("and " + queen + " letters from the Queen.");
+		}
+	}
+
+}

@@ -1,0 +1,30 @@
+Your first dataset
+[0.0, 0.0, 0.0]
+[0.0, 0.0, 0.0]
+[0.0, 1.0, 0.0]
+
+Sum of all elements in the array:1.0
+Average of all elements in the array:0.1111111111111111
+Highest value in the array:1.0
+lowest value in the array:0.0
+
+Your resulting amplified array:
+[0.0, 0.0, 0.0]
+[0.0, 0.0, 0.0]
+[0.0, 2.0, 0.0]
+
+Your second dataset
+[2.0, 0.0, 0.0]
+[0.0, 3.0, 0.0]
+[0.0, 0.0, 3.0]
+
+Your resulting matrix addition:
+[2.0, 0.0, 0.0]
+[0.0, 3.0, 0.0]
+[0.0, 1.0, 3.0]
+
+Your resulting matrix multiplication:
+[0.0, 0.0, 0.0]
+[0.0, 0.0, 0.0]
+[0.0, 3.0, 0.0]
+

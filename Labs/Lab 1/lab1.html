@@ -1,0 +1,267 @@
+<h2 align="center">
+	<font size="6">CSc 110 Lab 1</font></h2>
+<blockquote>
+	<p>
+		In these 2 hours you will be introduced to the software and equipment in the lab and the support staff. Lab sessions are &#39;must attend&#39; concentrating on exercises that are designed to instruct good programming and debugging techniques. Each week the lab exercises help you build the skills that assist you not only to complete the current assignment, but also to be for successful in the course.</p>
+</blockquote>
+<h3>
+	<b><font size="5">Tour of support resources:</font></b></h3>
+<blockquote>
+	<p>
+		Record or memorize this web address: http://connex.csc.uvic.ca/</p>
+	<p>
+		Those who have activated their CSc accounts should be able to login. Those registered in the course should see a tab for that course. We will deliver all web content in this course through this site.&nbsp;</p>
+	<p>
+		Attendance will be taken by your lab TA for participation and in-lab exercise completion.</p>
+</blockquote>
+<ul>
+</ul>
+<blockquote>
+	<p>
+		<span class="style2"><span class="style6">Configuration support documents and links are available on the main lab page</span></span> (<a href="http://www.csc.uvic.ca/%7Elabspg">http://www.csc.uvic.ca/~labspg</a>) under References.&nbsp; A specific guide to installation and testing of java on both PCs and Macs are available at:</p>
+	<p style="margin-left: 40px;">
+		<a href="http://www.csc.uvic.ca/%7Elabspg/Reference/PytoJava/use_java_PC.html" target="_blank">http://www.csc.uvic.ca/~labspg/Reference/PytoJava/use_java_PC.html</a></p>
+	<p style="margin-left: 40px;">
+		<a href="http://www.csc.uvic.ca/%7Elabspg/Reference/PytoJava/use_java_Mac.html" target="_blank">http://www.csc.uvic.ca/~labspg/Reference/PytoJava/use_java_Mac.html</a></p>
+	<p>
+		&nbsp;</p>
+</blockquote>
+<h3>
+	<b><font size="5">Instructor Demo:</font></b></h3>
+<blockquote>
+	<h4>
+		A tour of your computer&#39;s directory...</h4>
+	<ul>
+		<li>
+			Where are the programs you will use and where you will be saving your files. Every time you log into a CSc lab machine a permanent directory is mounted from a server. This appears to you as a local disk space designated the H: drive. Files stored to your H: drive will be available to you no matter where you log in in ECS. Files left on your desktop or on someplace else on the C: drive are often scrubbed and will not be there the following day.</li>
+		<li>
+			An efficient way to work, is to work in a folder on the desktop and drag the good copies to your H: drive periodically and certainly before you leave. That&#39;s like having your own archive. It is also a good idea to organize your code into sub-folders, so it does not pile up in one enormous &#39;labs&#39; folder.</li>
+		<br />
+		<li>
+			Submitting assignments in Connex (Demo).
+			<ul>
+				<li>
+					We log a temporary account into Connex</li>
+				<li>
+					We select the Assignments tool on the left</li>
+				<li>
+					Below the link to the assignment there is an add attachments button. Select that.</li>
+				<li>
+					Browse for the files you would like to submit adding each as an attachments.</li>
+				<li>
+					When that is done hit continue.&nbsp; Forgetting to continue until confirmation is the most common reason for files thought to be submitted but not actually there.</li>
+			</ul>
+		</li>
+	</ul>
+</blockquote>
+<blockquote>
+	<h4>
+		Your first Java program (the program shell)...</h4>
+	<ol>
+		<li>
+			Launch TextPad (or JEdit)</li>
+		<li>
+			Saving a Java file -- where does it go??</li>
+		<li>
+			Opening and navigating at the command prompt</li>
+		<li>
+			Compiling/Running a Java program at the command prompt using <i>Example 1</i> &amp; <i>Example 2 </i>below</li>
+	</ol>
+	<p>
+		JEdit is a very usable program editor that you can download for free and use at home. The &#39;Command Prompt&#39; is available to all PC&#39;s</p>
+	<p>
+		&nbsp;</p>
+</blockquote>
+<p>
+	<em><strong>Ex 1 Compiling:</strong></em></p>
+<ul>
+</ul>
+<blockquote>
+	<p>
+		Type in:</p>
+	<p>
+		<img alt="exercise 1" height="100" src="images/Ex1.jpg" width="344" /></p>
+	<p>
+		It is necessary to save this fragment in a plain text file named Ex01.java (The file name must match the class name exactly including case, and the file extension must be .java.&nbsp; Note that the third character in the name is a zero.). While it is not necessary, we recommend that you save it on the H: Drive, in a folder labelled CSC110, in a sub folder labelled lab_1. You will find that this extra level of organization will serve you well.&nbsp; Do not embed spaces in filenames (makes navigating with command prompt a pain).</p>
+	<p>
+		To compile the java &#39;source code&#39; which we just saved, open up a command prompt window and navigate to the folder where Ex01.java was saved. You can get a command line view of it by typing <strong>dir</strong> when you navigate there.</p>
+	<table border="1" cellpadding="4" cellspacing="4" width="100%">
+		<tbody>
+			<tr>
+				<td>
+					<p class="style11">
+						To avoid having to navigate in the Command Prompt window each time you make a new folder, you can: make a copy of the Command Prompt shortcut and paste it in the same directory/folder where you put your program. Right click on your Command Prompt copy and select properties. Locate the <b>Starts In</b> box and remove the path in that box. Apply your changes and close the Command Prompt shortcut. When you open up this copy of the Command Prompt shortcut it opens where ever it is placed. Very convenient, very fast.</p>
+					<p class="style11">
+						Another way that can get you a command prompt window in your current directory is to hold the Shift key and right click in your directory. There should be an option in the menu to open a command prompt window in that directory. Even faster.</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		Now type the command that invokes the compiler and point it at the file Ex01.java:</p>
+	<blockquote>
+		<p>
+			<strong>javac Ex01.java </strong></p>
+	</blockquote>
+	<table border="1" cellpadding="4" cellspacing="4" width="100%">
+		<tbody>
+			<tr>
+				<td>
+					<p class="style11">
+						The command <span class="style13">javac Ex01.java</span> is sent to the operating system. If JDK is properly installed and the path to the application is set for your system then the javac.exe program is launched and it is given the name of the file that it should operate upon.</p>
+					<p class="style11">
+						If there are any errors, fix them and recompile, ensuring there are no more errors. Examine the directory where you have stored Ex01.java. There should be a new file named Ex01.class. This file will be used by the Java Virtual Machine at run time. We will not run yet. You can try it, but there is no main method to run.</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</blockquote>
+<ul>
+</ul>
+<p>
+	<em><strong>Ex 2 Running the program:</strong></em></p>
+<blockquote>
+	<p>
+		Add a main method to the Ex01 class so that the program can be run as well as compiled.</p>
+</blockquote>
+<blockquote>
+	<p>
+		<img alt="ex2" height="217" src="images/Ex2.jpg" width="469" /></p>
+</blockquote>
+<blockquote>
+	<p>
+		Save and compile until free of compilation errors.</p>
+	<p>
+		Run the program above by issuing the command:</p>
+	<blockquote>
+		<p>
+			<strong>java Ex01 </strong></p>
+	</blockquote>
+	<table border="1" cellpadding="4" cellspacing="4" width="100%">
+		<tbody>
+			<tr>
+				<td>
+					<span class="style11">The command </span><span class="style11"><span class="style13">java Ex01 </span>is sent to the operating system. If JDK is properly installed and the path to the application is set for your system then the java.exe program is launched and it is given the name of the file that it should operate upon. In this case the compiled file&#39;s name is Ex01.class. Note that we do not include the .class when we use the java application to run the progra</span></td>
+			</tr>
+		</tbody>
+	</table>
+</blockquote>
+<p>
+	<strong><em>Ex 3 More Printing and some expressions:</em></strong></p>
+<blockquote>
+	<p>
+		Your TA will show you a few additional lines to put in your program, printing frequently so that you can see the effect of your code.&nbsp; Good ideas are arithmetic expressions, repeated operations on the same variable to show you how a variable can be updated using itself as part of the expression.&nbsp; a = a +1 ... print ... a = a*a ... print and so on.&nbsp; We should have a look at the mod operator (%) too.</p>
+	<p>
+		Something to continue with is some ASCII art, to practice escape characters. Anything except the dog from assignment one is fine.</p>
+</blockquote>
+<p>
+	<em><strong>Ex 4 Ints and Doubles:</strong></em></p>
+<blockquote>
+	<p>
+		a)</p>
+	<p>
+		Download the <a href="codeExamples/FunWithNumbers.java">FunWithNumbers.java</a> program.</p>
+	<p>
+		Test the FunWithNumbers program shell by compiling and running. Whenever you are given code you should see if it: a) compiles and b) runs. Sometimes if you drag on code in a browser window you will pick up invisible characters which will defeat the compiler. You should always save the linked file to your desktop rather than dragging code from a browser window.</p>
+	<p>
+		b)</p>
+	<p>
+		Silent programs are not good. Put in a line that will print &quot;Program begins&quot; to the screen.</p>
+	<p>
+		c)</p>
+	<p>
+		Put in a java statements:</p>
+</blockquote>
+<blockquote>
+	<p>
+		int answer1 = 3 / 2;<br />
+		double answer2 = 3 / 2;<br />
+		double answer3 = 3.0 / 2;<br />
+		System.out.println(answer1 + &quot; &quot; + answer2 + &quot; &quot; + answer3 + &quot; &quot; );</p>
+</blockquote>
+<ul>
+</ul>
+<blockquote>
+	<p>
+		Compile and run</p>
+	<p>
+		Which was the expected answer? Explain.</p>
+	<p>
+		d)</p>
+	<p>
+		Put in the java statements:</p>
+</blockquote>
+<blockquote>
+	<p class="codestyle">
+		double num1 = 3.0;<br />
+		int num2 = 2;<br />
+		double answer4 = num1 / num2;<br />
+		System.out.println(&quot;answer 4 is &quot; + answer4);</p>
+</blockquote>
+<ul>
+</ul>
+<blockquote>
+	<p>
+		Which was the expected answer? Explain.</p>
+	<p>
+		e)</p>
+	<p>
+		Try one more statement:</p>
+</blockquote>
+<blockquote>
+	<p>
+		<span class="codestyle">int answer5 = num1 / num2; </span></p>
+</blockquote>
+<ul>
+</ul>
+<blockquote>
+	<p>
+		This fails to compile. Fix it or remove it.</p>
+	<p>
+		f)</p>
+	<p>
+		On a new line assign num2 a new value that is double it&#39;s current value and then on a new line repeat the calculation of answer4, then print it.&nbsp; Was it what you expected?</p>
+	<p>
+		g)</p>
+	<p>
+		Use the final output from this exercise to get the TA to show you how to capture output from the Command Prompt window and paste it into your program as a comment. (Right click the command window, select &quot;Mark&quot;, select the text in the prompt window and it will be copied.)</p>
+	<p>
+		<br />
+		Discussion:</p>
+</blockquote>
+<ol>
+	<li>
+		What is the difference between a literal and a variable?</li>
+	<li>
+		How do you distinguish a literal double from a literal integer of the same value.</li>
+	<li>
+		If an arithmetic expression involves an integer and a double the results is ________?</li>
+	<li>
+		There are 4 String literals in the examples above, identify them.</li>
+	<li>
+		Why do we print so often?
+		<p>
+			&nbsp;</p>
+	</li>
+</ol>
+<p>
+	<em><strong>Ex 5 Find the error:</strong></em></p>
+<blockquote>
+	<p>
+		Debugging</p>
+	<p>
+		The links below have code with bugs; error(s) have been introduced. Visually trace each to see if you can first spot the error. Later you can compile to see what the compiler indicates. If the compiler has no complaints determine if there is a runtime error or a logical error.</p>
+	<p>
+		<a href="codeExamples/Ex01b1.java">Ex01b1.java</a> | <a href="codeExamples/Ex01b2.java">Ex01b2.java</a> | <a href="codeExamples/Ex01b3.java">Ex01b3.java</a></p>
+</blockquote>
+<h3>
+	<b><font size="5">Important Notes</font></b></h3>
+<blockquote>
+	In the beginning of this course, you should practice typing in your program shells without looking at reference material until you can type a program shell from memory. Later you can apply that same technique to method stubs and eventually to rudimentary classes.This term our mantra will be:&nbsp; We do not code that which we do not understand.&nbsp;<br />
+	<br />
+	Writing code or typing code is coding.&nbsp; To demonstrate our understanding to someone else we must first be able to describe our proposed solution in words, picture, glyps, circles and arrows or some combination of all of these, before we code.&nbsp; For debugging a TA will not look at code until given a description of the problem and a desired outcome.&nbsp; TA&#39;s will not listen while the student is looking at a screen.<br />
+	<p>
+		<span style="font-size: 11px;"><a href="http://webhome.csc.uvic.ca/~csc110l/attend/" target="_blank">You may wish to follow this link to the attendance program </a></span></p>
+</blockquote>
+<h3>
+	END</h3>

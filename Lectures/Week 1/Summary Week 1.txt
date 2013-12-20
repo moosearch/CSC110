@@ -1,0 +1,7 @@
+Introduced what programming was, computer science, and the works.
+
+Also introduced the structure of a java program and basic syntax.
+ - Print statements
+ - Escape sequences
+ - Annotations/Comments
+ - Keywords

@@ -1,0 +1,5 @@
+21
+there are 5 strings here
+here are four more
+anything separated by whitespace will be read as a string.
+end file

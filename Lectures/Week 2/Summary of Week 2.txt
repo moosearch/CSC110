@@ -1,0 +1,15 @@
+More on comments, data types, memory declaration, how to count in binary and learning 
+units of memory
+
+–int (32-bit)
+–double (64-bit).
+–boolean — A 1-bit value: true or false. (actually stored in a 32-bit int)
+–char — A UNICODE text character (16-bit).
+
+– byte — 8-bit integer,
+–short — 16-bit integer,
+–long — 64-bit integer,
+–float — 32-bit floating-point.
+
+Also learned static methods, declaring and calling them. Found that they are used to
+repeat repetitive statements.
